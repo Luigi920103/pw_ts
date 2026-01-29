@@ -8,9 +8,9 @@
 
 🔴 <<<<<<<<<< DEBUG POST  🔴
 curl -X POST "https://restful-booker.herokuapp.com/auth" -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}'
-STATUS: 200 | TIME: 227.59ms
+STATUS: 200 | TIME: 277.77ms
 RESPONSE: {
-  "token": "a067eb6116d89d3"
+  "token": "3f2fed237fcdb44"
 }
 🔴🔴 >>>>>>>>>> 🔴🔴
 
@@ -23,8 +23,8 @@ Using role "admin" to get session token for UpdateBookingById
    - Active mocks: 0
 
 🔴 <<<<<<<<<< DEBUG PUT  🔴
-curl -X PUT "https://restful-booker.herokuapp.com/booking/6" -H "Content-Type: application/json" -H "Cookie: token=a067eb6116d89d3" -d '{"firstname":"John","lastname":"Smith","totalprice":100,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}'
-STATUS: 200 | TIME: 54.29ms
+curl -X PUT "https://restful-booker.herokuapp.com/booking/6" -H "Content-Type: application/json" -H "Cookie: token=3f2fed237fcdb44" -d '{"firstname":"John","lastname":"Smith","totalprice":100,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}'
+STATUS: 200 | TIME: 57.25ms
 RESPONSE: {
   "firstname": "John",
   "lastname": "Smith",

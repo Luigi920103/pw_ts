@@ -8,8 +8,8 @@ Using role "admin" to get session token for UpdateBookingById
    - Active mocks: 0
 
 🔴 <<<<<<<<<< DEBUG PUT  🔴
-curl -X PUT "https://restful-booker.herokuapp.com/booking/7" -H "Content-Type: application/json" -H "Cookie: token=82edb40b1fcd9d7" -d '{"firstname":"John","lastname":"Smith","totalprice":500,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}'
-STATUS: 200 | TIME: 58.14ms
+curl -X PUT "https://restful-booker.herokuapp.com/booking/7" -H "Content-Type: application/json" -H "Cookie: token=82179c962b271a2" -d '{"firstname":"John","lastname":"Smith","totalprice":500,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}'
+STATUS: 200 | TIME: 58.81ms
 RESPONSE: {
   "firstname": "John",
   "lastname": "Smith",
