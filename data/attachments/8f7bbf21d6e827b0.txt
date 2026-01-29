@@ -6,9 +6,9 @@
 
 🔴 <<<<<<<<<< DEBUG POST  🔴
 curl -X POST "https://restful-booker.herokuapp.com/auth" -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}'
-STATUS: 200 | TIME: 58.08ms
+STATUS: 200 | TIME: 55.07ms
 RESPONSE: {
-  "token": "82179c962b271a2"
+  "token": "14c68271ef6187c"
 }
 🔴🔴 >>>>>>>>>> 🔴🔴
 
@@ -23,7 +23,7 @@ Using role "admin" to get session token for UpdateBookingById
 🎯 [MOCK MATCHED] Blocking real request to: https://restful-booker.herokuapp.com/booking/6
 
 🔴 <<<<<<<<<< DEBUG PUT (MOCKED) 🔴
-curl -X PUT "https://restful-booker.herokuapp.com/booking/6" -H "Content-Type: application/json" -H "Cookie: token=82179c962b271a2" -d '{"firstname":"John","lastname":"Smith","totalprice":100,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}'
+curl -X PUT "https://restful-booker.herokuapp.com/booking/6" -H "Content-Type: application/json" -H "Cookie: token=14c68271ef6187c" -d '{"firstname":"John","lastname":"Smith","totalprice":100,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}'
 STATUS: 400 | TIME: 0.00ms
 RESPONSE: {
   "error": "Bad Request MOCKED",

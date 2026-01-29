@@ -1,1 +1,0 @@
-curl -X PUT "https://restful-booker.herokuapp.com/booking/6" -H "Content-Type: application/json" -H "Cookie: token=3f2fed237fcdb44" -d '{"firstname":"John","lastname":"Smith","totalprice":100,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}'

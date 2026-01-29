@@ -5,7 +5,7 @@
 
 🔴 <<<<<<<<<< DEBUG GET  🔴
 curl -X GET "https://restful-booker.herokuapp.com/booking/6" -H "Content-Type: application/json"
-STATUS: 200 | TIME: 286.88ms
+STATUS: 200 | TIME: 268.46ms
 RESPONSE: {
   "firstname": "John",
   "lastname": "John",
