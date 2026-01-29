@@ -5,9 +5,9 @@
 
 🔴 <<<<<<<<<< DEBUG POST  🔴
 curl -X POST "https://restful-booker.herokuapp.com/auth" -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}'
-STATUS: 200 | TIME: 143.78ms
+STATUS: 200 | TIME: 270.73ms
 RESPONSE: {
-  "token": "cb88aeab15d0370"
+  "token": "f65c2ac8d552de5"
 }
 🔴🔴 >>>>>>>>>> 🔴🔴
 
