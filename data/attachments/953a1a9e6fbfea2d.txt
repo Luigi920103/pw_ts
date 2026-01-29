@@ -1,0 +1,14 @@
+🧹  [Global Setup JS] deleting authentication cache file
+
+🔍 [Checking] : POST https://restful-booker.herokuapp.com/auth
+   - Active mocks: 0
+
+🔴 <<<<<<<<<< DEBUG POST  🔴
+curl -X POST "https://restful-booker.herokuapp.com/auth" -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}'
+STATUS: 200 | TIME: 143.78ms
+RESPONSE: {
+  "token": "cb88aeab15d0370"
+}
+🔴🔴 >>>>>>>>>> 🔴🔴
+
+✅ Schema "loginSchema" validated successfully

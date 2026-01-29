@@ -1,0 +1,40 @@
+🧹  [Global Setup JS] deleting authentication cache file
+🗑️  File /__w/pw_ts/pw_ts/src/resources/temp/api_token_cache.json deleted.
+🔑 Recovering session token for the role: admin
+🚀 Generating new session token for [admin] in: /__w/pw_ts/pw_ts/src/resources/temp/api_token_cache.json
+
+🔍 [Checking] : POST https://restful-booker.herokuapp.com/auth
+   - Active mocks: 0
+
+🔴 <<<<<<<<<< DEBUG POST  🔴
+curl -X POST "https://restful-booker.herokuapp.com/auth" -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}'
+STATUS: 200 | TIME: 195.27ms
+RESPONSE: {
+  "token": "db3e90cfe531ff5"
+}
+🔴🔴 >>>>>>>>>> 🔴🔴
+
+✅ Token recovered for: admin
+Using role "admin" to get session token for UpdateBookingById
+🔑 Recovering session token for the role: admin
+✅ Token recovered for: admin
+
+🔍 [Checking] : PUT https://restful-booker.herokuapp.com/booking/6
+   - Active mocks: 0
+
+🔴 <<<<<<<<<< DEBUG PUT  🔴
+curl -X PUT "https://restful-booker.herokuapp.com/booking/6" -H "Content-Type: application/json" -H "Cookie: token=db3e90cfe531ff5" -d '{"firstname":"John","lastname":"Smith","totalprice":100,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}'
+STATUS: 200 | TIME: 27.14ms
+RESPONSE: {
+  "firstname": "John",
+  "lastname": "Smith",
+  "totalprice": 100,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2018-01-01",
+    "checkout": "2019-01-01"
+  },
+  "additionalneeds": "Breakfast"
+}
+🔴🔴 >>>>>>>>>> 🔴🔴
+

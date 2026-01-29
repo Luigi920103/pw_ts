@@ -1,0 +1,34 @@
+🔑 Recovering session token for the role: admin
+🚀 Generating new session token for [admin] in: /__w/pw_ts/pw_ts/src/resources/temp/api_token_cache.json
+
+🔍 [Checking] : POST https://restful-booker.herokuapp.com/auth
+   - Active mocks: 0
+
+🔴 <<<<<<<<<< DEBUG POST  🔴
+curl -X POST "https://restful-booker.herokuapp.com/auth" -H "Content-Type: application/json" -d '{"username":"admin","password":"password123"}'
+STATUS: 200 | TIME: 30.24ms
+RESPONSE: {
+  "token": "dd286f173197c69"
+}
+🔴🔴 >>>>>>>>>> 🔴🔴
+
+✅ Token recovered for: admin
+✅ Mock activated ".*/booking/.*" using the file "bookingError.json"
+Using role "admin" to get session token for UpdateBookingById
+🔑 Recovering session token for the role: admin
+✅ Token recovered for: admin
+
+🔍 [Checking] : PUT https://restful-booker.herokuapp.com/booking/6
+   - Active mocks: 1
+🎯 [MOCK MATCHED] Blocking real request to: https://restful-booker.herokuapp.com/booking/6
+
+🔴 <<<<<<<<<< DEBUG PUT (MOCKED) 🔴
+curl -X PUT "https://restful-booker.herokuapp.com/booking/6" -H "Content-Type: application/json" -H "Cookie: token=dd286f173197c69" -d '{"firstname":"John","lastname":"Smith","totalprice":100,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}'
+STATUS: 400 | TIME: 0.00ms
+RESPONSE: {
+  "error": "Bad Request MOCKED",
+  "message": "Invalid booking data provided",
+  "timestamp": "2024-05-20T10:00:00Z"
+}
+🔴🔴 >>>>>>>>>> 🔴🔴
+
