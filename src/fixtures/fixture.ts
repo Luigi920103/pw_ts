@@ -1,4 +1,12 @@
-import { test as base, expect } from "@playwright/test"
+import {
+  test as base,
+  expect,
+  Page,
+  Locator,
+  APIRequestContext,
+  APIResponse,
+} from "@playwright/test"
+
 import ApiClient from "../resources/utils/apiClient"
 import { cleanVariables, deleteFile } from "../resources/utils/commands"
 import path from "path"
@@ -29,4 +37,4 @@ test.beforeAll(async () => {
   await deleteFile(CACHE_FILE)
 })
 
-export { expect }
+export { expect, Page, Locator, APIRequestContext, APIResponse }

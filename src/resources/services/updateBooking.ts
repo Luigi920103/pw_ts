@@ -1,7 +1,8 @@
-import { APIRequestContext, APIResponse } from "@playwright/test"
+import { APIRequestContext, APIResponse } from "../../fixtures/fixture"
 import ApiClient, { CustomAPIResponse } from "../utils/apiClient"
 import { apiPaths } from "../utils/constants"
 import ApiSessionManager from "../utils/apiSessionManager"
+import { BaseService } from "./baseService"
 
 export interface BookingPayload {
   firstname?: string
@@ -15,9 +16,7 @@ export interface BookingPayload {
   additionalneeds?: string
 }
 
-const baseUrl: string = process.env.AUTOMATION_API_BASE_URL || ""
-
-class UpdateBookingServiceAction {
+class UpdateBookingServiceAction extends BaseService {
   getDefaultPayload(): BookingPayload {
     return {
       firstname: "John",
@@ -34,7 +33,7 @@ class UpdateBookingServiceAction {
 
   async updateBookingById(
     request: APIRequestContext,
-    id: string | number,
+    idExpected: string | number,
     role: string = "admin",
     customPayload: BookingPayload = {},
     config: any = null,
@@ -56,11 +55,13 @@ class UpdateBookingServiceAction {
       }
     }
 
-    const getBookingPath = apiPaths.Booking.ByID.replace("{id}", String(id))
+    const getBookingPath = this.buildPath(apiPaths.Booking.ByID, {
+      id: idExpected,
+    })
 
     return await ApiClient.put(
       request,
-      baseUrl,
+      this.baseUrl,
       getBookingPath,
       payload,
       config,

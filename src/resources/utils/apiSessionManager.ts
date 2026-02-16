@@ -1,6 +1,6 @@
 import fs from "fs"
 import path from "path"
-import { APIRequestContext } from "@playwright/test"
+import { APIRequestContext } from "../../fixtures/fixture"
 import LoginServiceAction from "../services/loginService"
 import { setCurrentRole } from "./commands"
 

@@ -1,5 +1,5 @@
 import dayjs from "dayjs"
-import { expect, Page, APIRequestContext } from "@playwright/test"
+import { expect, Page, APIRequestContext } from "../../fixtures/fixture"
 import fs from "fs"
 import * as baseSchema from "../../resources/schemas/indexSchema"
 import MongoDBClient from "./mongoClient"

@@ -1,4 +1,4 @@
-import { APIRequestContext, APIResponse } from "@playwright/test"
+import { APIRequestContext, APIResponse } from "../../fixtures/fixture"
 import * as allure from "allure-js-commons"
 
 const timeoutValue = 60000

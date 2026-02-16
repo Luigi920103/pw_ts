@@ -27,6 +27,7 @@ const config: PlaywrightTestConfig = {
   ],
 
   use: {
+    baseURL: `${process.env.UI_BASE_URL}`,
     screenshot: "only-on-failure",
     video: "retain-on-failure",
     trace: "retain-on-failure",

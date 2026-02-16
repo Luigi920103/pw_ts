@@ -1,4 +1,4 @@
-import { APIRequestContext, APIResponse } from "@playwright/test"
+import { APIRequestContext, APIResponse } from "../fixtures/fixture"
 import LoginServiceAction from "../resources/services/loginService"
 
 export type UserRole = "admin" | "regular user"
